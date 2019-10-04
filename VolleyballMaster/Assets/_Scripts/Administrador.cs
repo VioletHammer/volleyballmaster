@@ -8,7 +8,7 @@ public class Administrador : MonoBehaviour
     private long identificacion { get; set; }
     private List<Cancha> canchas;
     private List<Partido> partidos;
-    private List
+   // private List
     // Start is called before the first frame update
     void Start()
     {
