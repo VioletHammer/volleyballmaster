@@ -6,17 +6,20 @@ public class Administrador : MonoBehaviour
 {
     private string nombre { get; set; }
     private long identificacion { get; set; }
-    
-   // private List
+    private Cola games;
+
+    // private List
     // Start is called before the first frame update
     void Start()
     {
-        
+        games = new Cola();   
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MatchUp(string team)
     {
-        
+        games.push(team);
     }
+
+    
+
 }
