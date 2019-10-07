@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Court :Cola 
+public class Court : Cola 
 {
     private string nombre;
     private bool ocupado;   // no creo que se nesesite
 
-    public Court(string nombre, bool ocupado)
+    public Court(string nombre)
     {
         this.nombre = nombre;
-        this.ocupado = ocupado;
     }
 
     public Court()

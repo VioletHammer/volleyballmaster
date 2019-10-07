@@ -13,8 +13,13 @@ public class Administrador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        games = new Cola();   
+        games = new Cola();  
+        for(int i = 0; i<50; i++)
+        {
+            canchas.push("cancha "+i);
+        }
     }
+
 
     public void MatchUp(string team)
     {
@@ -24,7 +29,7 @@ public class Administrador : MonoBehaviour
   public string createGame()
     {
         string juego = null;
-        if (games.canCreate())
+        if (games.canCreate() && !(canchas.empty()))
         {
             juego = games.pop() +"  vs  " +games.pop() + "se juagara en:  " +canchas.pop();
         }return juego;

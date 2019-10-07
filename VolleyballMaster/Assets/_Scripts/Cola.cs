@@ -7,7 +7,7 @@ public class Cola : MonoBehaviour
     private int ind;
     private int tam;
     private string[] arr;
-    private static int n = 4;
+    private static int n = 100;
     private int cont { get; set; }
     private int indpop;
 
