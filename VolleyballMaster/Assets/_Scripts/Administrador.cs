@@ -7,6 +7,7 @@ public class Administrador : MonoBehaviour
     private string nombre { get; set; }
     private long identificacion { get; set; }
     private Cola games;
+    private Court canchas;
 
     // private List
     // Start is called before the first frame update
@@ -25,7 +26,7 @@ public class Administrador : MonoBehaviour
         string juego = null;
         if (games.canCreate())
         {
-            juego = games.pop() +"  vs  " +games.pop() ;
+            juego = games.pop() +"  vs  " +games.pop() + "se juagara en:  " +canchas.pop();
         }return juego;
     }
 
