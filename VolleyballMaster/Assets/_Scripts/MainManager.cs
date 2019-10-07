@@ -3,21 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using VolleyballMaster.DS;
+using VolleyballMaster.UserTypes;
 
-public class LogInManager : MonoBehaviour
+public class MainManager : MonoBehaviour
 {
     public GameObject FirstScreen;
     public GameObject LogInScreen;
+    public GameObject MatchMaker;
     public InputField Input;
     public InputField Password;
-
+    public Entrenador e = new Entrenador("u1", "123", "Pedro García", "Los Tigres del Volley");
+    public Pila teamStack = new Pila();
+    public Cola courtQ = new Cola();
 
     void Start()
     {
-
+        MatchMaker.SetActive(false);
         LogInScreen.SetActive(false);
         FirstScreen.SetActive(true);
         
+
+
     }
     public void LogIn()
     {
@@ -31,10 +38,19 @@ public class LogInManager : MonoBehaviour
 
     public void FinalLogIn()
     {
-        if (Input.text == "u1" && Password.text=="123")
+        
+        if (Input.text == e.user && Password.text== e.paswrd)
         {
-            SceneManager.LoadScene("MatchMaker");
+            MatchMaker.SetActive(true);
+
         }
     }
-        
+
+    public void QueueUp()
+    {
+        e.RequestGame(teamStack, e.team, courtQ);
+    }
+
+    
+
 }
