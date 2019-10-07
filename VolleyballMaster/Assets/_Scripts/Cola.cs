@@ -8,7 +8,7 @@ public class Cola : MonoBehaviour
     private int tam;
     private string[] arr;
     private static int n = 4;
-    private int cont;
+    private int cont { get; set; }
     private int indpop;
 
     public Cola()
@@ -48,4 +48,11 @@ public class Cola : MonoBehaviour
         cont--;
         return arr[x];
     }
+
+
+    public bool canCreate()
+    {
+        return cont > 1;
+    }
+
 }

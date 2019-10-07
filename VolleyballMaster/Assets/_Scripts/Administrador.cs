@@ -20,6 +20,13 @@ public class Administrador : MonoBehaviour
         games.push(team);
     }
 
-    
+  public string createGame()
+    {
+        string juego = null;
+        if (games.canCreate())
+        {
+            juego = games.pop() +"  vs  " +games.pop() ;
+        }return juego;
+    }
 
 }
