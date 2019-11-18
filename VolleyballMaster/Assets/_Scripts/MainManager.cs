@@ -11,6 +11,9 @@ public class MainManager : MonoBehaviour
     public GameObject FirstScreen;
     public GameObject LogInScreen;
     public GameObject MatchMaker;
+    public GameObject SignUpFormP;
+    public GameObject SignUpFormC;
+    public GameObject SignUpFormA;
     public InputField Input;
     public InputField Password;
     public Entrenador e = new Entrenador("u1", "123", "Pedro García", "Los Tigres del Volley");
@@ -22,7 +25,10 @@ public class MainManager : MonoBehaviour
         MatchMaker.SetActive(false);
         LogInScreen.SetActive(false);
         FirstScreen.SetActive(true);
-        
+        SignUpFormP.SetActive(false);
+        SignUpFormC.SetActive(false);
+        SignUpFormA.SetActive(false);
+
 
 
     }
