@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coach : User
+public class Coach
 {
    private List<Team> teams { get; set; }
 

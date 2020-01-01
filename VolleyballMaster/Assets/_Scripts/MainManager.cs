@@ -11,9 +11,11 @@ public class MainManager : MonoBehaviour
     public GameObject FirstScreen;
     public GameObject LogInScreen;
     public GameObject MatchMaker;
-    public GameObject SignUpFormP;
-    public GameObject SignUpFormC;
-    public GameObject SignUpFormA;
+    public GameObject MainMenu;
+    public GameObject SUPlayer;
+    public GameObject SUCoach;
+    public GameObject SUAdmin;
+    public GameObject SUFirstScreen;
     public InputField Input;
     public InputField Password;
     public Entrenador e = new Entrenador("u1", "123", "Pedro García", "Los Tigres del Volley");
@@ -25,11 +27,10 @@ public class MainManager : MonoBehaviour
         MatchMaker.SetActive(false);
         LogInScreen.SetActive(false);
         FirstScreen.SetActive(true);
-        SignUpFormP.SetActive(false);
-        SignUpFormC.SetActive(false);
-        SignUpFormA.SetActive(false);
-
-
+        SUPlayer.SetActive(false);
+        SUCoach.SetActive(false);
+        SUAdmin.SetActive(false);
+        SUFirstScreen.SetActive(false);
 
     }
     public void LogIn()
@@ -40,6 +41,30 @@ public class MainManager : MonoBehaviour
 
     public void SignUp()
     {
+        FirstScreen.SetActive(false);
+        SUFirstScreen.SetActive(true);
+    }
+
+    public void CoachSignUp()
+
+    {
+        MainMenu.SetActive(false);
+        SUFirstScreen.SetActive(false);
+        SUCoach.SetActive(true);
+    }
+
+    public void PlayerSignUp()
+
+    {
+        MainMenu.SetActive(false);
+        SUFirstScreen.SetActive(false);
+        SUPlayer.SetActive(true);
+    }
+    public void AdminSignUp()
+    {
+        MainMenu.SetActive(false);
+        SUFirstScreen.SetActive(false);
+        SUAdmin.SetActive(true);
     }
 
     public void FinalLogIn()

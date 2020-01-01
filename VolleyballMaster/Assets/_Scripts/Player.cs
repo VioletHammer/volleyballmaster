@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : User
+public class Player 
 {
     private Team equipo { get; set; }
     private StatisticsPlayer statistics { get; set; }
