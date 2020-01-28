@@ -135,4 +135,64 @@ namespace VolleyballMaster.DS
         }
     }
 
+    public class PriorityQueue {
+        private Team[] array;
+        private int size;
+        
+         public PriorityQueue(int n)
+        {
+            array = new Team[n];
+            this.size = 0;
+        }    
+
+        public void insertItem(Team team)
+        {
+            array[size] = team;
+            moveUp();
+            size++;
+        }
+
+        private void moveUp()
+        {
+            int child = size;
+            int parent = (child - 1) / 2;
+            Team temp = array[child];
+            while(child > 0 && temp.ranking < array[parent].ranking){
+                  array[child] = array[parent];
+                  child =  parent;
+                  parent = (child-1)/2;  
+            }
+            array[child] =  temp;
+        }
+
+        public Team removeMin(){
+            Team min =  array[0];
+            array[0] =  array[--size];
+            moveDown();
+            return min;
+        }
+
+        private void moveDown(){
+            bool flag = false;
+            Team smallest = null;
+            int parent = 0;
+            int child = 2*parent+1;
+            Team temp = array[parent];
+            while(child < size && !flag){
+                smallest = array[child];
+                if(child+1 < size && array[child+1].ranking < array[child].ranking){
+                    smallest = array[++child];}
+                if(smallest.ranking < temp.ranking){
+                    array[parent] = smallest;
+                    parent = child;
+                } 
+                else{
+                    flag = true;
+                }   
+                child =  2*parent+1;
+            }
+            array[parent] = temp;
+        }
+    }
+
 }
