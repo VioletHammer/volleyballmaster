@@ -11,8 +11,9 @@ public class Player
 
     public Player(Team equipo, StatisticsPlayer statistics, int tshirtNumber)
     {
-        this.equipo = equipo ?? throw new ArgumentNullException(nameof(equipo));
-        this.statistics = statistics ?? throw new ArgumentNullException(nameof(statistics));
+        this.equipo = equipo;
+        this.statistics = statistics;
         this.tshirtNumber = tshirtNumber;
     }
+
 }

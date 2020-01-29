@@ -11,7 +11,15 @@ public class Administrator: User
     {
     }
 
-    // Torneos
 
+   public bool insertUser(string name, string lastName, string password, string email, long id)
+    {
+        bool result = false;
+        
+
+
+        return result;
+    }
+    // Torneos
 
 }
