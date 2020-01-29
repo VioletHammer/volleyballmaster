@@ -7789,8 +7789,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1362484720}
   m_TextComponent: {fileID: 281486445}
   m_Placeholder: {fileID: 1092808514}
-  m_ContentType: 0
-  m_InputType: 0
+  m_ContentType: 7
+  m_InputType: 2
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
@@ -8081,8 +8081,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1411023386}
   m_TextComponent: {fileID: 370196473}
   m_Placeholder: {fileID: 842614023}
-  m_ContentType: 0
-  m_InputType: 0
+  m_ContentType: 7
+  m_InputType: 2
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
@@ -11036,8 +11036,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2037305492}
   m_TextComponent: {fileID: 524557782}
   m_Placeholder: {fileID: 1317885905}
-  m_ContentType: 0
-  m_InputType: 0
+  m_ContentType: 7
+  m_InputType: 2
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
