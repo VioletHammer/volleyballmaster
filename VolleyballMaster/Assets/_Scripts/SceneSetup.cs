@@ -1,5 +1,6 @@
 ﻿using UnityEditor;
 using UnityEditor.SceneManagement;
+using UnityEngine;
 
 [InitializeOnLoad]
 public class SceneSetup
@@ -11,6 +12,6 @@ public class SceneSetup
             return;
 
         // Set Play Mode scene to first scene defined in build settings.
-        EditorSceneManager.playModeStartScene = AssetDatabase.LoadAssetAtPath<SceneAsset>(EditorBuildSettings.scenes[0].path);
+        //EditorSceneManager.playModeStartScene = AssetDatabase.LoadAssetAtPath<SceneAsset>(EditorBuildSettings.scenes[0].path);
     }
 }
