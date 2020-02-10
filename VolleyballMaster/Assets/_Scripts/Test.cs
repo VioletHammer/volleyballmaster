@@ -35,6 +35,8 @@ public class Test : MonoBehaviour
         readJson = File.ReadAllText(path);
         h = JsonConvert.DeserializeObject<Foo>(readJson);
         Debug.Log(h.internalFoo.s);
+
+        SingletonSample.Instance.Guava();
        
     }
 
