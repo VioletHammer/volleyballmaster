@@ -136,11 +136,11 @@ namespace VolleyballMaster.DS
         }
     }
 
-    public class PriorityQueue {
+    public class PriorityQueue_Ranking  {
         private Team[] array;
         private int size;
         
-         public PriorityQueue(int n)
+         public PriorityQueue_Ranking(int n)
         {
             array = new Team[n];
             this.size = 0;

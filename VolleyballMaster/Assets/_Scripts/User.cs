@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class User : MonoBehaviour
 {
-    private string name { get; set; }
-    private string lastName { get; set; }
-    private string password { get; set; }
-    private string email { get; set; }
-    private long id { get; set; }
+    public string name { get; set; }
+    public string lastName { get; set; }
+    public string password { get; set; }
+    public string email { get; set; }
+    public long id { get; set; }
 
     public User(string name, string lastName, string password, string email, long id)
     {
