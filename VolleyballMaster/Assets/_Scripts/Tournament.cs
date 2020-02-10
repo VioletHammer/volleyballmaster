@@ -16,7 +16,7 @@ public class Tournament : MonoBehaviour
         private int ind;
         private int tam;
         private Court[] arr;
-        private int n;
+        private int n=9;
         private int cont { get; set; }
         private int indpop;
 
@@ -118,7 +118,9 @@ public class Tournament : MonoBehaviour
         {
             temp = colaC.pop();
             if (temp.ocupado)
+            {
                 colaC.push(temp);
+            }
             else
                 res = false;
         }
